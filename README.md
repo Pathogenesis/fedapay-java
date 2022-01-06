@@ -77,7 +77,7 @@ public class MainClass {
 			e.printStackTrace();
 		}
 		
-		//Get All transaction
+		//Get All transactions
 		
 		try {
 			TransactionCollection transactionCollection = Transaction.all();
