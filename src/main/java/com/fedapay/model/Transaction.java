@@ -17,21 +17,6 @@ import com.fedapay.net.Update;
 import com.fedapay.utile.Serializer;
 import com.fedapay.utile.TransactionModel;
 
-/**
- * Class Transaction
- *
- * @property int id
- * @property String reference
- * @property String description
- * @property String callback_url
- * @property String amount
- * @property String status
- * @property int transaction_id
- * @property String created_at
- * @property String updated_at
- *
- * @package com.fedapay.model
- */
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Transaction extends FedaPayObject {

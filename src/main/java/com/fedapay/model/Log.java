@@ -7,26 +7,6 @@ import com.fedapay.net.Retrieve;
 import com.fedapay.utile.LogModel;
 
 
-/**
- * Class Log
- *
- * @property int id
- * @property String method
- * @property String url
- * @property String status
- * @property String ip_address
- * @property String version
- * @property String source
- * @property String query
- * @property String body
- * @property String response
- * @property int account_id
- * @property String created_at
- * @property String updated_at
- *
- * @package com.fedapay.model
- */
-
 public class Log extends FedaPayObject {
 
 	 private String id;

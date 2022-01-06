@@ -12,27 +12,6 @@ import com.fedapay.net.Retrieve;
 import com.fedapay.net.Update;
 import com.fedapay.utile.PayoutModel;
 
-/**
- * Class Payout
- *
- * @property int id
- * @property String reference
- * @property String amount
- * @property String status
- * @property int customer_id
- * @property int balance_id
- * @property String mode
- * @property int last_error_code
- * @property String last_error_message
- * @property String created_at
- * @property String updated_at
- * @property String scheduled_at
- * @property String sent_at
- * @property String failed_at
- * @property String deleted_at
- *
- * @package com.fedapay.model
- */
 
 public class Payout extends FedaPayObject {
 

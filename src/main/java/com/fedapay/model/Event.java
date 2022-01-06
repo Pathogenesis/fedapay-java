@@ -6,21 +6,6 @@ import com.fedapay.net.All;
 import com.fedapay.net.Retrieve;
 import com.fedapay.utile.EventModel;
 
-/**
- * Class Event
- *
- * @property int $id
- * @property string $type
- * @property string $entity
- * @property int $object_id
- * @property int $account_id
- * @property string $object
- * @property string $created_at
- * @property string $updated_at
- *
- * @package FedaPay
- */
-
 public class Event extends FedaPayObject {
 
 	private String id;

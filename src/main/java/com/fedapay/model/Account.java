@@ -11,19 +11,6 @@ import com.fedapay.net.Delete;
 import com.fedapay.net.Update;
 import com.fedapay.utile.AccountModel;
 
-/**
- * Class Account
- *
- * @property int $id
- * @property string $name
- * @property string $timezone
- * @property string $country
- * @property string $verify
- * @property string $created_at
- * @property string $updated_at
- *
- * @package com.fedapay.model
- */
 
 public class Account extends FedaPayObject {
 

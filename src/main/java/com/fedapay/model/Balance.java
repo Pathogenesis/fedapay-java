@@ -7,21 +7,6 @@ import com.fedapay.net.Retrieve;
 import com.fedapay.net.Update;
 import com.fedapay.utile.BalanceModel;
 
-/**
- * Class Balance
- *
- * @property int $id
- * @property int $currency_id
- * @property int $account_id
- * @property int $amount
- * @property string $mode
- * @property string $deleted_at
- * @property string $created_at
- * @property string $updated_at
- *
- * @package com.fedapay.model
- */
-
 
 public class Balance extends FedaPayObject {
 

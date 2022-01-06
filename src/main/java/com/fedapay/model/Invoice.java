@@ -6,38 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fedapay.collections.InvoiceCollection;
 import com.fedapay.net.All;
 
-/**
- * Class Invoice
- *
- * @property int id
- * @property int number
- * @property String reference
- * @property String status
- * @property int tax
- * @property String discount_type
- * @property int discount_amount
- * @property int ttc
- * @property int sub_total
- * @property int discount
- * @property int before_tax
- * @property int tax_amount
- * @property int total_amount_paid
- * @property String notes
- * @property int invoice_products_count
- * @property String due_at
- * @property String sent_at
- * @property array paid_at
- * @property String partially_paid_at
- * @property int customer_id
- * @property int currency_id
- * @property int account_id
- * @property String created_at
- * @property String updated_at
- * @property String deleted_at
- *
- * @package com.fedapay.model
- */
-
 public class Invoice {
 
 	private String id;

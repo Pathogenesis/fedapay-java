@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.fedapay</groupId>
 	<artifactId>fedapay-java</artifactId>
-	<version>1.0.0</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>fedapay-java</name>
 	<url>https://github.com/fedapay/fedapay-java</url>
 	<description> Cette librairie permettra de faire les requetes HTTP de Fedapay dans un projet Java.</description>
@@ -76,10 +76,6 @@
 						<goals>
 							<goal>sign</goal>
 						</goals>
-						<configuration>
-							<keyname>0x1FE593CD</keyname>
-							<passphraseServerId>0x1FE593CD</passphraseServerId>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -171,7 +167,6 @@
 			<artifactId>logback-core</artifactId>
 			<version>1.1.8</version>
 		</dependency>
-		
 	</dependencies>
 
 	<scm>

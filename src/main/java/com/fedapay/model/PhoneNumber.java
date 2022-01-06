@@ -2,18 +2,6 @@ package com.fedapay.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * Class PhoneNumber
- *
- * @property int id
- * @property String number
- * @property String country
- * @property String created_at
- * @property String updated_at
- *
- * @package com.fedapay.model
- */
-
 public class PhoneNumber {
 
 	private String id;

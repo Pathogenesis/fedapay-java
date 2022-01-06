@@ -1,46 +1,37 @@
 package com.fedapay.model;
 
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
-import com.fedapay.collections.EventCollection;
-import com.fedapay.collections.TransactionCollection;
+import javax.naming.directory.InvalidAttributeIdentifierException;
 
 public class MainClass {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		
-		FedaPay.setEnvironement("sandbox");
-		FedaPay.setApiKey("sk_sandbox_lWw2kwhv4apq-5N-QiTGMpy9");
-		
-		System.out.println(Transaction.retrieve("35340").wasPaid());
-		
-		EventCollection events = Event.all();
-		for(int i = 0; i < events.getData().size(); i++) {
-			Event event = events.getData().get(i);
-			event.getAccountId();
+		try {
+			
+			FedaPay.setEnvironement("sandbox");
+			
+		} catch (InvalidAttributeIdentifierException e) {
+			e.printStackTrace();
 		}
 		
-		System.out.println(events.getMeta().get("current_page")); 
-		System.out.println(events.getData().get(0).getAccountId());
+		FedaPay.setApiKey("sk_sandbox_lWw2kwhv4apq-5N-QiTGMpy9");
 		
-		TransactionCollection transactionCollection = Transaction.all();
+		Map<String, Object> customerMap = new HashMap<String, Object>();
 		
-		List<Transaction> transactionList = transactionCollection.getData();
-		System.out.println(transactionList.get(0).getId());
+		customerMap.put("firstname", "John");
+		customerMap.put("lastname", "Doe");
+		customerMap.put("email", "johndoe@gmail.com");
 		
-		String json = transactionCollection.getMeta().get("per_page").toString();
-		System.out.println(json);
+		try {
+			
+			Customer customer = Customer.create(customerMap);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
-		//Generate Token Transaction
-		
-		Transaction transaction = Transaction.retrieve("35929");
-		System.out.println(transaction.rawJsonResponse);
-		
-		//Get transaction receipt url 
-		
-		transaction = transactionList.get(19);
-		String s = transaction.getReceipUrl();
-		System.out.println(s);
-		 
 	}
 }

@@ -5,22 +5,6 @@ import com.fedapay.net.All;
 import com.fedapay.net.Retrieve;
 import com.fedapay.utile.CurrencyModel;
 
-/**
- * Class Currency
- *
- * @property int $id
- * @property string $name
- * @property string $iso
- * @property int $code
- * @property string $prefix
- * @property string $suffix
- * @property string $div
- * @property string $created_at
- * @property string $updated_at
- *
- * @package com.fedapay.model
- */
-
 public class Currency extends FedaPayObject {
 	
 	private String id;

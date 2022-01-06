@@ -14,28 +14,6 @@ import com.fedapay.net.Update;
 import com.fedapay.utile.PageModel;
 
 
-/**
- * Class Page
- *
- * @property int id
- * @property String name
- * @property String description
- * @property String reference
- * @property String published
- * @property String amount
- * @property String enable_phone_number
- * @property String callback_url
- * @property array custom_fields
- * @property String image_url
- * @property int account_id
- * @property int currency_id
- * @property String created_at
- * @property String updated_at
- * @property String deleted_at
- *
- * @package com.fedapay.model
- */
-
 public class Page extends FedaPayObject {
 
 	private String id;

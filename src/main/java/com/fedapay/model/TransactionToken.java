@@ -2,14 +2,6 @@ package com.fedapay.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * Class TransactionToken
- * 
- * @property String token
- * @property String securePaymentLink
- * 
- * @package com.fedapay.model
- */
 
 public class TransactionToken {
 

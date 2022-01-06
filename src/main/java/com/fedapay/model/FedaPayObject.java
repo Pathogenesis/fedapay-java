@@ -2,11 +2,6 @@ package com.fedapay.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-/**
- * Class FedaPayObject
- *
- * @package com.fedapay.model
- */
 
 public class FedaPayObject {
 

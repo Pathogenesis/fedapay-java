@@ -12,20 +12,6 @@ import com.fedapay.net.Retrieve;
 import com.fedapay.net.Update;
 import com.fedapay.utile.CustomerModel;
 
-/**
- * Class Customer
- *
- * @property int $id
- * @property string $firstname
- * @property string $lastname
- * @property string $email
- * @property string $phone
- * @property string $created_at
- * @property string $updated_at
- *
- * @package com.fedapay.model
- */
-
 public class Customer extends FedaPayObject {
 	
 	private String id;
