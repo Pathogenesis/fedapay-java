@@ -41,7 +41,7 @@ You'll need to manually install the following JARs:
 
 ## Usage
 
-StripeExample.java
+FedaPayExample.java
 
 ```java
 import java.util.HashMap;
@@ -77,6 +77,13 @@ public class MainClass {
 			e.printStackTrace();
 		}
 		
+		//Get All transaction
+		
+		try {
+			TransactionCollection transactionCollection = Transaction.all();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}		
 	}
 }
 ```

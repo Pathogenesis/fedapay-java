@@ -5,6 +5,8 @@ import java.util.Map;
 
 import javax.naming.directory.InvalidAttributeIdentifierException;
 
+import com.fedapay.collections.TransactionCollection;
+
 public class MainClass {
 
 	public static void main(String[] args) {
@@ -29,6 +31,12 @@ public class MainClass {
 			
 			Customer customer = Customer.create(customerMap);
 			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			TransactionCollection transactionCollection = Transaction.all();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
