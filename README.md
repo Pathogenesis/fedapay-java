@@ -39,13 +39,6 @@ You'll need to manually install the following JARs:
 - The FedaPay JAR from <https://repo1.maven.org/maven2/com/fedapay/fedapay-java/>
 
 
-## Documentation
-
-Please see the [Java API docs][api-docs] for the most
-up-to-date documentation.
-
-You can also refer to the [online Javadoc][javadoc].
-
 ## Usage
 
 StripeExample.java
@@ -91,9 +84,7 @@ public class MainClass {
 
 --
 
-[fed]: https://feddapay.com
-[stripe-mock]: https://github.com/stripe/stripe-mock
-[youtube-playlist]: https://www.youtube.com/playlist?list=PLy1nL-pvL2M5TnSGVjEHTTMgdnnHi-KPg
+[fed]: https://fedapay.com
 
 <!--
 # vim: set tw=79:
