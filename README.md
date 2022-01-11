@@ -61,7 +61,7 @@ public class MainClass {
 			e.printStackTrace();
 		}
 		
-		FedaPay.setApiKey("sk_sandbox_lWw2kwhv4apq-5N-QiTGMpy9");
+		FedaPay.setApiKey("sk_xxx_xxx");
 		
 		Map<String, Object> customerMap = new HashMap<String, Object>();
 		
