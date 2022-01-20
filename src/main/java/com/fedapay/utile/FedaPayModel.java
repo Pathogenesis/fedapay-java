@@ -9,8 +9,6 @@ public class FedaPayModel<T> {
 	@JsonProperty
 	protected T data;
 	
-	@JsonProperty
-	protected Map<String, Object> meta;
 
 	public FedaPayModel() {
 		super();
@@ -19,7 +17,6 @@ public class FedaPayModel<T> {
 	public FedaPayModel(T data, Map<String, Object> meta) {
 		super();
 		this.data = data;
-		this.meta = meta;
 	}
 
 	public T getData() {
@@ -30,11 +27,4 @@ public class FedaPayModel<T> {
 		this.data = data;
 	}
 
-	public Map<String, Object> getMeta() {
-		return meta;
-	}
-
-	public void setMeta(Map<String, Object> meta) {
-		this.meta = meta;
-	}
 }

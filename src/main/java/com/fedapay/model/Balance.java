@@ -110,7 +110,7 @@ public class Balance extends FedaPayObject {
 	}
 	
 	public static Balance retrieve(String balanceId) throws Exception {
-		Balance balance = Retrieve.retrieve(new BalanceModel(), "/balances", balanceId).getV1Balance();
+		Balance balance = Retrieve.retrieve(new BalanceModel(), "/balances", balanceId).getData();
 		balance.setRawJsonResponse(Update.lastRequestResponse);
 		return balance;
 	}

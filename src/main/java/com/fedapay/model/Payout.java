@@ -191,25 +191,25 @@ public class Payout extends FedaPayObject {
 	}
 	
 	public static Payout retrieve(String payoutId) throws Exception {
-		Payout payout = Retrieve.retrieve(new PayoutModel(), "/payouts", payoutId).getV1Payout();
+		Payout payout = Retrieve.retrieve(new PayoutModel(), "/payouts", payoutId).getData();
 		payout.setRawJsonResponse(Retrieve.lastRequestResponse);
 		return payout;
 	}
 	
 	public static Payout create(Map<String, Object> payoutMap) throws Exception {
-		Payout payout = Create.create(new PayoutModel(), "/payouts", payoutMap).getV1Payout();
+		Payout payout = Create.create(new PayoutModel(), "/payouts", payoutMap).getData();
 		payout.setRawJsonResponse(Create.lastRequestResponse);
 		return payout;
 	}
 	
 	public static Payout update(String payoutId, Map<String, Object> payoutMap) throws Exception {
-		Payout payout = Update.update(new PayoutModel(), "/payouts", payoutId, payoutMap).getV1Payout();
+		Payout payout = Update.update(new PayoutModel(), "/payouts", payoutId, payoutMap).getData();
 		payout.setRawJsonResponse(Update.lastRequestResponse);
 		return payout;
 	}
 	
 	public Payout save() throws Exception {
-		Payout payout = Update.update(new PayoutModel(), "/payouts", this.id, this.toMap()).getV1Payout();
+		Payout payout = Update.update(new PayoutModel(), "/payouts", this.id, this.toMap()).getData();
 		payout.setRawJsonResponse(Update.lastRequestResponse);
 		return payout;
 	}

@@ -13,7 +13,7 @@ public class FedaPay {
 	
 	public static void setEnvironement(String environement) throws InvalidAttributeIdentifierException {
 		if(environement != "live" && environement != "production" && environement != "dev" 
-			&& environement != "development" && environement != "sandbox" && environement != "test") {
+			&& environement != "development" && environement != "sandbox" && environement != "test" && environement != "localTest" && environement != "localTest-2" ) {
 			throw new InvalidAttributeIdentifierException("Environment value not in 'live', 'production', 'dev', 'development','sandbox', 'test'.");
 		}
 

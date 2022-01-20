@@ -8,6 +8,7 @@ import com.fedapay.collections.AccountCollection;
 import com.fedapay.net.All;
 import com.fedapay.net.Create;
 import com.fedapay.net.Delete;
+import com.fedapay.net.Retrieve;
 import com.fedapay.net.Update;
 import com.fedapay.utile.AccountModel;
 
@@ -101,19 +102,25 @@ public class Account extends FedaPayObject {
 	}
 
 	public static Account create(Map<String, Object> accountMap) throws Exception {
-		Account account = Create.create(new AccountModel(), "/accounts", accountMap).getV1Account();
+		Account account = Create.create(new AccountModel(), "/accounts", accountMap).getData();
 		account.setRawJsonResponse(Create.lastRequestResponse);
 		return account;
 	}
 
+	public static Account retrieve(String accountId) throws Exception {
+		Account account = Retrieve.retrieve(new AccountModel(), "/accounts", accountId).getData();
+		account.setRawJsonResponse(Retrieve.lastRequestResponse) ;
+		return account;
+	}
+	
 	public static Account update(String accountId, Map<String, Object> accountMap) throws Exception {
-		Account account = Update.update(new AccountModel(), "/accounts", accountId, accountMap).getV1Account();
+		Account account = Update.update(new AccountModel(), "/accounts", accountId, accountMap).getData();
 		account.setRawJsonResponse(Update.lastRequestResponse);
 		return account;
 	}
 
 	public Account save() throws Exception {
-		Account account = Update.update(new AccountModel(), "/accounts", this.id, this.toMap()).getV1Account();
+		Account account = Update.update(new AccountModel(), "/accounts", this.id, this.toMap()).getData();
 		account.setRawJsonResponse(Update.lastRequestResponse);
 		return account;
 	}

@@ -91,7 +91,7 @@ public class Currency extends FedaPayObject {
 	}
 	
 	public static Currency retrieve(String currencyId) throws Exception {
-		Currency currency =  Retrieve.retrieve(new CurrencyModel(), "/currencies", currencyId).getV1Currency();
+		Currency currency =  Retrieve.retrieve(new CurrencyModel(), "/currencies", currencyId).getData();
 		currency.setRawJsonResponse(Retrieve.lastRequestResponse);
 		return currency;
 	}

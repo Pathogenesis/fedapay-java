@@ -18,7 +18,7 @@ import com.squareup.okhttp.Response;
 public class Create {
 
 	public static String lastRequestResponse; 
-	@SuppressWarnings("unchecked")
+
 	public static <T> T create( T cls, String serviceUrl, Map<String, Object> requestMap) throws Exception {
 
 		RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"),
@@ -35,10 +35,10 @@ public class Create {
 		String responseString = response.body().string();
 		if (response.isSuccessful()) {
 			lastRequestResponse = responseString;
-			return (T) Serializer.allSerializer(cls.getClass(), responseString);
+			return (T) Serializer.allSerializer(cls, responseString);
 		} else {
 
-			if (responseString.contains("message")) {
+			if (!responseString.contains("errors")) {
 
 				ObjectMapper mapper = new ObjectMapper();
 				mapper.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);

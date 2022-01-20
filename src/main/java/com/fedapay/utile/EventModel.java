@@ -3,17 +3,9 @@ package com.fedapay.utile;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fedapay.model.Event;
 
-public class EventModel {
+public class EventModel extends FedaPayModel<Event>{
 
 	@JsonProperty("v1/event")
-	private Event v1Event;
+	private Event data;
 
-	public Event getV1Event() {
-		return v1Event;
-	}
-
-	public void setV1Event(Event v1Event) {
-		this.v1Event = v1Event;
-	}
-	
 }

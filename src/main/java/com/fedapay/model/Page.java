@@ -192,25 +192,25 @@ public class Page extends FedaPayObject {
 	}
 
 	public static Page retrieve(String pageId) throws Exception {
-		Page page = Retrieve.retrieve(new PageModel(), "/pages", pageId).getV1Page();
+		Page page = Retrieve.retrieve(new PageModel(), "/pages", pageId).getData();
 		page.setRawJsonResponse(Retrieve.lastRequestResponse);
 		return page;
 	}
 
 	public static Page create(Map<String, Object> pageMap) throws Exception {
-		Page page = Create.create(new PageModel(), "/pages", pageMap).getV1Page();
+		Page page = Create.create(new PageModel(), "/pages", pageMap).getData();
 		page.setRawJsonResponse(Create.lastRequestResponse);
 		return page;
 	}
 
 	public static Page update(String pageId, Map<String, Object> pageMap) throws Exception {
-		Page page = Update.update(new PageModel(), "/pages", pageId, pageMap).getV1Page();
+		Page page = Update.update(new PageModel(), "/pages", pageId, pageMap).getData();
 		page.setRawJsonResponse(Update.lastRequestResponse);
 		return page;
 	}
 	
 	public Page save() throws Exception {
-		Page page = Update.update(new PageModel(), "/pages", this.id, this.toMap()).getV1Page();
+		Page page = Update.update(new PageModel(), "/pages", this.id, this.toMap()).getData();
 		page.setRawJsonResponse(Update.lastRequestResponse);
 		return page;
 	}

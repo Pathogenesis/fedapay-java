@@ -96,7 +96,7 @@ public class WebhookSignature {
 
 	  
 	  public static Event constructEvent(String payload, String sigHeader, String secret, long tolerance) throws Exception {
-	    Event event = Serializer.allSerializer(new EventModel(), payload).getV1Event();
+	    Event event = Serializer.allSerializer(new EventModel(), payload).getData();
 	    Signature.verifyHeader(payload, sigHeader, secret, tolerance);
 	    return event;
 	  }

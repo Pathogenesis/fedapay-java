@@ -90,25 +90,25 @@ public class Customer extends FedaPayObject {
 	}
 	
 	public static Customer create(Map<String, Object> customerDataMap) throws Exception {
-		Customer customer = Create.create(new CustomerModel(), "/customers", customerDataMap).getV1Customer(); 
+		Customer customer = Create.create(new CustomerModel(), "/customers", customerDataMap).getData(); 
 		customer.setRawJsonResponse(Create.lastRequestResponse);
 		return customer;
 	}
 	
 	public static Customer retrieve(String customerId) throws Exception {
-		Customer customer = Retrieve.retrieve(new CustomerModel(), "/customers", customerId).getV1Customer();
+		Customer customer = Retrieve.retrieve(new CustomerModel(), "/customers", customerId).getData();
 		customer.setRawJsonResponse(Retrieve.lastRequestResponse);
 		return customer;
 	}
 	
 	public static Customer update( String customerId, Map<String, Object> customerDataMap) throws Exception {
-		Customer customer = Update.update(new CustomerModel(), "/customers", customerId, customerDataMap).getV1Customer();
+		Customer customer = Update.update(new CustomerModel(), "/customers", customerId, customerDataMap).getData();
 		customer.setRawJsonResponse(Update.lastRequestResponse);
 		return customer;
 	}
 	
 	public Customer save() throws Exception {
-		Customer customer = Update.update(new CustomerModel(), "/customers", this.id, this.toMap()).getV1Customer();
+		Customer customer = Update.update(new CustomerModel(), "/customers", this.id, this.toMap()).getData();
 		customer.setRawJsonResponse(Update.lastRequestResponse);
 		return customer;
 	}

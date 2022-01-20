@@ -107,7 +107,7 @@ public class Event extends FedaPayObject {
 	}
 
 	public static Event retrieve(String eventId) throws Exception {
-		Event event = Retrieve.retrieve(new EventModel(), "/events", eventId).getV1Event();
+		Event event = Retrieve.retrieve(new EventModel(), "/events", eventId).getData();
 		event.setRawJsonResponse(Retrieve.lastRequestResponse);
 		return event;
 	}

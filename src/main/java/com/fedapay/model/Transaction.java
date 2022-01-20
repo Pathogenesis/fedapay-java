@@ -213,7 +213,7 @@ public class Transaction extends FedaPayObject {
 	}
 
 	public Transaction save() throws Exception {
-		Transaction transaction = Update.update(new TransactionModel(), "transactions", this.id, this.toMap()).getData();
+		Transaction transaction = Update.update(new TransactionModel(), "/transactions", this.id, this.toMap()).getData();
 		transaction.setRawJsonResponse(Update.lastRequestResponse) ;
 		return transaction;
 	}

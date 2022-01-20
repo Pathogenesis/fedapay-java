@@ -19,7 +19,6 @@ public class Update {
 	
 	public static String lastRequestResponse;
 	
-	@SuppressWarnings("unchecked")
 	public static <T> T update( T cls, String serviceUrl, String id, Map<String, Object> requestMap) throws Exception {
 
 		RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"),
@@ -28,7 +27,8 @@ public class Update {
 		Request request = new Request.Builder().url(UrlMaker.getUrl(serviceUrl) + "/" + id)
 				.addHeader("Authorization", "Bearer " + FedaPay.apiKey)
 				.addHeader("Content-Type", "application/json")
-				.addHeader("Accept", "application/json").put(requestBody).build();
+				.addHeader("Accept", "application/json")
+				.put(requestBody).build();
 
 		OkHttpClient client = new OkHttpClient();
 
@@ -36,7 +36,7 @@ public class Update {
 		String responseString = response.body().string();
 		if (response.isSuccessful()) {
 			lastRequestResponse = responseString;
-			return (T) Serializer.allSerializer(cls.getClass(), responseString);
+			return (T) Serializer.allSerializer(cls, responseString);
 		} else {
 			if (responseString.contains("message")) {
 

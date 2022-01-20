@@ -147,7 +147,7 @@ public class Log extends FedaPayObject {
 	}
 	 
 	public static Log retrieve(String logId) throws Exception {
-		Log log = Retrieve.retrieve(new LogModel(), "/logs", logId).getV1Log();
+		Log log = Retrieve.retrieve(new LogModel(), "/logs", logId).getData();
 		log.setRawJsonResponse(Retrieve.lastRequestResponse);
 		return log;
 	}

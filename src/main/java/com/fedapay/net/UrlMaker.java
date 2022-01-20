@@ -13,7 +13,6 @@ public class UrlMaker {
 		FedaPay.apiKey = Objects.requireNonNull(FedaPay.apiKey, "FedaPay apiKey can't be null");
 		
 		ResourceBundle resource = ResourceBundle.getBundle("fedapay.config");
-		
 		return resource.getString(FedaPay.environement) + "/v1" +serviceUrl; 
 	}
 }

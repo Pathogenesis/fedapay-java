@@ -6,7 +6,7 @@ public class ApiError {
 
 	@JsonProperty("message")
 	private String message;
-	
+		
 	public ApiError(String message) {
 		this.message = message;
 	}
@@ -15,8 +15,6 @@ public class ApiError {
 		super();
 	}
 
-
-
 	public String getMessage() {
 		return message;
 	}
@@ -24,5 +22,4 @@ public class ApiError {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-
 }
