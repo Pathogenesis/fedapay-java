@@ -17,7 +17,7 @@ The official [FedaPay][fed] Java client library.
 Add this dependency to your project's build file:
 
 ```groovy
-implementation 'com.fedapay:fedapay-java:1.0.0'
+implementation 'com.fedapay:fedapay-java:1.0.1'
 ```
 
 ### Maven users
@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.fedapay</groupId>
   <artifactId>fedapay-java</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 
