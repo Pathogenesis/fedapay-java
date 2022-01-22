@@ -44,24 +44,19 @@ You'll need to manually install the following JARs:
 FedaPayExample.java
 
 ```java
+
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.naming.directory.InvalidAttributeIdentifierException;
+import com.fedapay.*
 
 public class MainClass {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
-		try {
-			
-			FedaPay.setEnvironement("sandbox");
-			
-		} catch (InvalidAttributeIdentifierException e) {
-			e.printStackTrace();
-		}
 		
-		FedaPay.setApiKey("sk_sandbox_lWw2kwhv4apq-5N-QiTGMpy9");
+		FedaPay.setEnvironement("sandbox");
+		
+		FedaPay.setApiKey("sk_sandbox_xxxxxxxxxxxxxxxxx");
 		
 		Map<String, Object> customerMap = new HashMap<String, Object>();
 		
@@ -69,21 +64,12 @@ public class MainClass {
 		customerMap.put("lastname", "Doe");
 		customerMap.put("email", "johndoe@gmail.com");
 		
-		try {
-			
-			Customer customer = Customer.create(customerMap);
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		Customer customer = Customer.create(customerMap);
 		
 		//Get All transactions
 		
-		try {
-			TransactionCollection transactionCollection = Transaction.all();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}		
+		TransactionCollection transactionCollection = Transaction.all();
+				
 	}
 }
 ```

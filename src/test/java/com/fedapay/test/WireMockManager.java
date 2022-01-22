@@ -4,21 +4,11 @@ import com.fedapay.model.FedaPay;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static com.github.tomakehurst.wiremock.client.WireMock.stubFor;
-
 import com.github.tomakehurst.wiremock.WireMockServer;
-import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
+import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.Properties;
-import java.util.ResourceBundle;
-
-import javax.naming.directory.InvalidAttributeIdentifierException;
-
-import org.junit.Rule;
-
-import com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder;
-import com.github.tomakehurst.wiremock.junit.WireMockRule;
 
 
 public class WireMockManager {

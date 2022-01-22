@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.fedapay</groupId>
 	<artifactId>fedapay-java</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>fedapay-java</name>
 	<url>https://github.com/fedapay/fedapay-java</url>
 	<description> Cette librairie permettra de faire les requetes HTTP de Fedapay dans un projet Java.</description>
@@ -24,6 +24,7 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<executable>/usr/lib/jvm/java-11-openjdk-amd64</executable>
 				</configuration>
 			</plugin>
 
@@ -57,6 +58,10 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.9.1</version>
+				<configuration>					
+					<executable>/usr/lib/jvm/java-11-openjdk-amd64</executable>
+					<additionalparam>-Xdoclint:none</additionalparam>
+				</configuration>
 				<executions>
 					<execution>
 						<id>attach-javadocs</id>
@@ -79,8 +84,8 @@
 							<goal>sign</goal>
 						</goals>
 						<configuration>
-							<keyname>0x1FE593CD</keyname>
-							<passphraseServerId>0x1FE593CD</passphraseServerId>
+							<keyname>0x566DF187</keyname>
+							<passphraseServerId>0x566DF187</passphraseServerId>
 						</configuration>
 					</execution>
 				</executions>
